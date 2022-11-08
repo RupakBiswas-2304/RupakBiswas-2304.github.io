@@ -1,4 +1,4 @@
-baseURL = 'http://rupakbiswas-2304.github.io'
+baseURL = 'https://rupakbiswas-2304.github.io/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'hugo-theme-shell'
