@@ -1,6 +1,6 @@
 baseURL = 'https://rupakbiswas-2304.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = '@metaphor'
 theme = 'hugo-theme-shell'
 ignoreErrors = ["error-remote-getjson"]
 
