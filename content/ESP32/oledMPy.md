@@ -55,4 +55,4 @@ oled.invert(True)
 oled.show()
 ```
 
-
+![image](https://user-images.githubusercontent.com/75058161/202899061-5e7a703c-0be5-4353-bc48-90a97cbfb8b4.png)
