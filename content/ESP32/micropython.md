@@ -1,4 +1,4 @@
-## how to flash microPython firmware in esp32 ? 
+## How to flash microPython firmware in esp32 
 [ linux & windows ]
 
 - go to [micropython offical site](https://www.espressif.com/en/support/download/athttps://micropython.org/download/#esp32)  
