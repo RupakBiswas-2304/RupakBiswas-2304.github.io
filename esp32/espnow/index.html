@@ -7,11 +7,45 @@
 \u003cli\u003e\u003ca href=\u0022https://github.com/glenn20/micropython/tree/espnow-g20\u0022\u003esource code\u003c/a\u003e\u003c/li\u003e
 \u003cli\u003eHow to flash ? go to this \u003ca href=\u0022../micropython/\u0022\u003elink\u003c/a\u003e\u003c/li\u003e
 \u003c/ul\u003e
-\u003ch2 id=\u0022usage\u0022\u003eUsage\u003c/h2\u003e
-\u003cul\u003e
-\u003cli\u003e\u003c/li\u003e
-\u003c/ul\u003e
-\u003c/span\u003e`,"activity-content",contentDelay)};typeeffetct()</script></div><span class=navFull><span><a href=/>Home</a>
+\u003ch2 id=\u0022sender-code\u0022\u003eSender Code\u003c/h2\u003e
+\u003cpre tabindex=\u00220\u0022\u003e\u003ccode\u003eimport network
+import espnow
+
+# A WLAN interface must be active to send()/recv()
+sta = network.WLAN(network.STA_IF)  # Or network.AP_IF
+sta.active(True)
+sta.disconnect()   # For ESP8266
+
+e = espnow.ESPNow()
+e.active(True)
+peer = b\u0026#39;\\xbb\\xbb\\xbb\\xbb\\xbb\\xbb\u0026#39;   # MAC address of peer\u0026#39;s wifi interface
+e.add_peer(peer)
+
+e.send(\u0026#34;Starting...\u0026#34;)       # Send to all peers
+for i in range(100):
+    e.send(peer, str(i)*20, True)
+    e.send(b\u0026#39;end\u0026#39;)
+\u003c/code\u003e\u003c/pre\u003e\u003ch2 id=\u0022reciver-code\u0022\u003eReciver Code\u003c/h2\u003e
+\u003cpre tabindex=\u00220\u0022\u003e\u003ccode\u003eimport network
+import espnow
+
+# A WLAN interface must be active to send()/recv()
+sta = network.WLAN(network.STA_IF)
+sta.active(True)
+sta.disconnect()   # Because ESP8266 auto-connects to last Access Point
+
+e = espnow.ESPNow()
+e.active(True)
+peer = b\u0026#39;\\xaa\\xaa\\xaa\\xaa\\xaa\\xaa\u0026#39;   # MAC address of peer\u0026#39;s wifi interface
+e.add_peer(peer)
+
+while True:
+    host, msg = e.recv()
+    if msg:             # msg == None if timeout in recv()
+        print(host, msg)
+        if msg == b\u0026#39;end\u0026#39;:
+            break
+\u003c/code\u003e\u003c/pre\u003e\u003c/span\u003e`,"activity-content",contentDelay)};typeeffetct()</script></div><span class=navFull><span><a href=/>Home</a>
 <span>&#8192;|&#8192;</span>
 <a href=./..>/esp32/</a></span>
 <span class=navCredits><a href=https://github.com/RupakBiswas-2304 target=_blank rel=noopener>Github</a></span></span></body></html>
