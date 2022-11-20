@@ -54,5 +54,8 @@ oled.show()
 oled.invert(True)
 oled.show()
 ```
-
+#
+#
+#
+# -
 

@@ -2,4 +2,4 @@
 - [ Getting Started I (windows) ](../installation)
 - [ Installing default firmware ](../how_to_flash)
 - [ Installing MicroPython firmware ](../micropython)
-- [ OLED with MicroPython on ESP32 ](../oledMPy)
+- [ OLED with MicroPython on ESP32 ](../oledmpy)
