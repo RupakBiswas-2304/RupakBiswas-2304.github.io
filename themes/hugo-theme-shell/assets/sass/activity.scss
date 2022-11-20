@@ -16,8 +16,9 @@ body {
 }
 
 pre {
-    overflow-x: scroll;
-    white-space: pre;
+    background: #161616cf;
+    padding: 5px;
+    border: 1px solid;
 }
 
 #activity-title, #activity-content {
