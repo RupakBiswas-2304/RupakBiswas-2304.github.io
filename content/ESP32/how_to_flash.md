@@ -11,3 +11,4 @@
         ``` esptool.py --port /dev/ttyusb0 --baud 460800 write_flash --flash_size=detect 0 factory/factory_wroom-32.bin```
 
 - for windows users, port might be com7/com8 etc instead of /dev/ttyusb0, go to device manager and check the port number
+- 
