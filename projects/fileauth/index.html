@@ -1,0 +1,116 @@
+<!doctype html><html lang=en-us><head><title></title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><style>@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";:root{--cursor-visibility:hidden}html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}.cursor,#activity-title:after,#activity-content:after,#cd:after,#whoami:after,#cat:after,#tree:after{visibility:var(--cursor-visibility);content:"|";overflow:hidden;color:#fff;animation:blink 500ms linear infinite alternate}@keyframes blink{0%{opacity:0}100%{opacity:1}}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}:root{--cursor-visibility:hidden}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{background:#161616cf;padding:5px;border:1px solid}@keyframes blink{0%{opacity:0}100%{opacity:1}}body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}.navFull{background-color:#353535;font-family:courier new;font-size:17px;display:inline;position:fixed;bottom:0;left:0;width:100%;padding-top:5px;padding:10px;padding-bottom:0}.navCredits{float:right;padding-right:18px;padding-bottom:10px;padding-top:5px}#content::after{content:"\a\a";white-space:pre}</style></head><body><div id=content><span id=activity-title></span><br><span id=activity-content></span><br><script type=text/javascript>async function typewriter(e,t,n){var s=0,o=!1;addText="";const i=document.getElementById(t),a=()=>new Promise(e=>setTimeout(e,n)),r=()=>new Promise(e=>e()),c=()=>i.innerHTML=e.slice(0,s+1)+addText,l=document.createElement("span");for(l.id="blink",i.style.setProperty("--cursor-visibility","visible");s<e.length;){if(e.charAt(s+1)==="<"&&(o=!0),e.charAt(s+1)===">"&&(o=!1),o){s++;continue}requestAnimationFrame(c),n===0?await r():await a(),s++}i.style.setProperty("--cursor-visibility","collapse")}function parseDelay(e){const t=parseInt(e,10);return isNaN(t)?0:t}const titleDelay=parseDelay("0"),contentDelay=parseDelay("0"),typeeffetct=async()=>{await typewriter("\u003cspan id=\u0027terminal\u0027\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c/h1\u003e\u003c/span\u003e","activity-title",titleDelay),await typewriter(`\u003cspan id=\u0027terminal\u0027\u003e\u003c!-- raw HTML omitted --\u003e
+\u003ch1 id=\u0022file-auth\u0022\u003eFile-Auth\u003c/h1\u003e
+\u003cp\u003eCodepeak 2021 Open source\u003c/p\u003e
+\u003c!-- raw HTML omitted --\u003e
+\u003cp\u003e\u003cimg src=\u0022https://img.shields.io/badge/python-3670A0?style=for-the-badge\u0026amp;logo=python\u0026amp;logoColor=ffdd54\u0022 alt=\u0022Python\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge\u0026amp;logo=django\u0026amp;logoColor=white\u0022 alt=\u0022Django\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge\u0026amp;logo=mysql\u0026amp;logoColor=white\u0022 alt=\u0022MySQL\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge\u0026amp;logo=react\u0026amp;logoColor=%2361DAFB\u0022 alt=\u0022React\u0022\u003e \u003c!-- raw HTML omitted --\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/JWT-black?style=for-the-badge\u0026amp;logo=JSON%20web%20tokens\u0022 alt=\u0022JWT\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge\u0026amp;logo=html5\u0026amp;logoColor=white\u0022 alt=\u0022HTML5\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge\u0026amp;logo=css3\u0026amp;logoColor=white\u0022 alt=\u0022CSS3\u0022\u003e
+\u003cimg src=\u0022https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge\u0026amp;logo=postman\u0026amp;logoColor=white\u0022 alt=\u0022Postman\u0022\u003e
+\u003ca href=\u0022https://code.visualstudio.com/\u0022\u003e\u003cimg src=\u0022https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code\u0026amp;logoColor=ffffff\u0022 alt=\u0022Visual Studio Code\u0022\u003e\u003c/a\u003e
+\u003ca href=\u0022https://github.com/File_authentication\u0022\u003e\u003cimg src=\u0022https://img.shields.io/badge/--181717?logo=github\u0026amp;logoColor=ffffff\u0022 alt=\u0022GitHub\u0022\u003e\u003c/a\u003e
+\u003c!-- raw HTML omitted --\u003e
+A secure-authentication system which verifies users by verifying an uploaded file.\u003c/p\u003e
+\u003c!-- raw HTML omitted --\u003e
+\u003c!-- raw HTML omitted --\u003e
+\u003ch3 id=\u0022advantages\u0022\u003eAdvantages\u003c/h3\u003e
+\u003cul\u003e
+\u003cli\u003eHard/near-impossible to bruteforce.\u003c/li\u003e
+\u003cli\u003eNo need to remember password.\u003c/li\u003e
+\u003cli\u003eEven if somebody sees your file they can\u0026rsquo;t get access to the account.\u003c/li\u003e
+\u003cli\u003eStorage space doesn\u0026rsquo;t depend on the file size.\u003c/li\u003e
+\u003cli\u003eReduces working time \u0026amp; increases productivity.\u003c/li\u003e
+\u003cli\u003eCredentials accessible anytime \u0026amp; anywhere with just few clicks.\u003c/li\u003e
+\u003cli\u003eEasy to understand and use for beginners.\u003c/li\u003e
+\u003cli\u003eHighly accessible with low skill gap.\u003c/li\u003e
+\u003c/ul\u003e
+\u003ch3 id=\u0022disadvantages\u0022\u003eDisadvantages\u003c/h3\u003e
+\u003cul\u003e
+\u003cli\u003eIf the key-file is large it would take much time to verify.\u003c/li\u003e
+\u003cli\u003eIf user shares their file publicly it would be a risk.\u003c/li\u003e
+\u003cli\u003eIf someone\u0026rsquo;s computer is infected then it may be risky to keep key files open because there are malwares which take user\u0026rsquo;s position coordinates from IP, copy hardware ID, copy the key file and send it to the hacker and hacker can easily get access user\u0026rsquo;s account. In this case two factor authentication(2FA) also has no role to save user\u0026rsquo;s account.\u003c/li\u003e
+\u003cli\u003eIf key file is lost during formatting device or some other issue the account will be locked forever if 2FA is absent.\u003c/li\u003e
+\u003cli\u003eIf it is a online system then internet problems can reduce productivity.\u003c/li\u003e
+\u003cli\u003eIf someone is using this service from a remote server the session can be hijacked and control of account can be taken by hacker.\u003c/li\u003e
+\u003cli\u003eCannot be used in public servers like airports/railways since it poses humongous threat on the file integrity and could lead to a breach of security.\u003c/li\u003e
+\u003c/ul\u003e
+\u003ch1 id=\u0022contributing-\u0022\u003eContributing :\u003c/h1\u003e
+\u003cp\u003eContributions are always welcome!\u003c/p\u003e
+\u003ch3 id=\u0022codepeak-2021-scoring-criteria-\u0022\u003eCodepeak-2021 scoring criteria :\u003c/h3\u003e
+\u003cul\u003e
+\u003cli\u003eFor merging easy issue assign 5 points.\u003c/li\u003e
+\u003cli\u003eFor merging MED issue assign 10 points.\u003c/li\u003e
+\u003cli\u003eFor merging hard issue assign 20 points.\u003c/li\u003e
+\u003cli\u003eFor merging 1-point issue assign 1 points.\u003c/li\u003e
+\u003cli\u003eFor pointing a new easy issue assigne 1 point\u003c/li\u003e
+\u003cli\u003eFor pointing a new MED/HARD issue assigne 1 point\u003c/li\u003e
+\u003c/ul\u003e
+\u003ch3 id=\u0022getting-started-\u0022\u003eGetting started :\u003c/h3\u003e
+\u003cul\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 1 ]\u003c/p\u003e
+\u003cp\u003eFork the repo, give a star also😉, git clone the repo \u0026ndash;\u003c/p\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  git clone https://github.com/RupakBiswas-2304/File_authentication.git
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 2]\u003c/p\u003e
+\u003cp\u003ecd into the main directory , next create a virtual environment using the folowing command
+if you are using multiple version of python, use python3.7\u003c/p\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  python -m venv venv
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cp\u003eafter successfull creation of virtual environment , activate the environment by executing the activate file in venv/scripts/\u003c/p\u003e
+\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 3 ]\u003c/p\u003e
+\u003cp\u003einstall requied python modules -\u003c/p\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  pip install -r requirment.txt
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 4 ]\u003c/p\u003e
+\u003cp\u003eopen your mysql server , and create a new database and update the settings.py in the auth folder\u003c/p\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  DATABASES \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#f92672\u0022\u003e{\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;default\u0026#39;\u003c/span\u003e: \u003cspan style=\u0022color:#f92672\u0022\u003e{\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;ENGINE\u0026#39;\u003c/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;django.db.backends.mysql\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;NAME\u0026#39;\u003c/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;YOUR DATABASE NAME\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;USER\u0026#39;\u003c/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;ADD YOUR USER NAME HERE\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;PASSWORD\u0026#39;\u003c/span\u003e: \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;ADD YOUR PASSWORD HERE\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;HOST\u0026#39;\u003c/span\u003e:\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;127.0.0.1\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;PORT\u0026#39;\u003c/span\u003e:\u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;3306\u0026#39;\u003c/span\u003e,
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    \u003cspan style=\u0022color:#f92672\u0022\u003e}\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  \u003cspan style=\u0022color:#f92672\u0022\u003e}\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 5 ]
+open terminal and start the server :
+(make sure your virtual environment is active)\u003c/p\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  python manage.py migrate
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e  python manage.py runserver
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 6 ]
+use postman to test apis\u003c/p\u003e
+\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003e[ step 7 ]
+Now read the full documentation of the API to start developing. \u003ca href=\u0022https://github.com/RupakBiswas-2304/File_authentication/blob/main/Api-doc.md\u0022\u003eLink to API Documentation\u003c/a\u003e\u003c/p\u003e
+\u003c/li\u003e
+\u003c/ul\u003e
+\u003ch1 id=\u0022heading\u0022\u003e\u003c/h1\u003e
+\u003ch2 id=\u0022getting-started-with-create-react-app\u0022\u003eGetting Started with Create React App\u003c/h2\u003e
+\u003cp\u003e\u003ca href=\u0022https://github.com/RupakBiswas-2304/File_authentication/blob/main/react.md\u0022\u003eRead here\u003c/a\u003e\u003c/p\u003e
+\u003ch2 id=\u0022authors\u0022\u003eAuthors\u003c/h2\u003e
+\u003cul\u003e
+\u003cli\u003e\u003ca href=\u0022https://www.github.com/RupakBiswas-2304\u0022\u003e@Rupak\u003c/a\u003e\u003c/li\u003e
+\u003cli\u003ePushkar Verma \u003ca href=\u0022https://www.github.com/pushkar2112\u0022\u003e@pushkar2112\u003c/a\u003e\u003c/li\u003e
+\u003cli\u003ePadmaja \u003ca href=\u0022https://github.com/padmaja2305\u0022\u003e@padmaja\u003c/a\u003e\u003c/li\u003e
+\u003cli\u003eAnurag Ravi \u003ca href=\u0022https://github.com/Anurag-ravi\u0022\u003e@Anurag-ravi\u003c/a\u003e\u003c/li\u003e
+\u003cli\u003eSanath Kumar Vengaldas \u003ca href=\u0022https://github.com/Sanath91009\u0022\u003e@Sanath91009\u003c/a\u003e\u003c/li\u003e
+\u003cli\u003e[make atleast 15 points worth contribution and add your name here]\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/span\u003e`,"activity-content",contentDelay)};typeeffetct()</script></div><span class=navFull><span><a href=/>Home</a>
+<span>&#8192;|&#8192;</span>
+<a href=./..>/projects/</a></span>
+<span class=navCredits><a href=https://github.com/RupakBiswas-2304 target=_blank rel=noopener>Github</a></span></span></body></html>
