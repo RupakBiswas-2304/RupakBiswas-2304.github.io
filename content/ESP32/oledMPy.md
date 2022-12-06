@@ -11,7 +11,7 @@
 - Need to install ```SSD1306 OLED Library```
 - Open Editor ( Thonny or uPyCraft )
 - Create a file named ```ssd1306.py```
-- Copy the code from [here](./static/ssd1306.py)
+- Copy the code from [here](https://gist.githubusercontent.com/RupakBiswas-2304/e819d3502282109896ad580f9e20c174/raw/cd134bdb78c35f4d17442a4093c4ec22e9050570/ssd1306.py)
 - Save the file
 
 ## Code 
