@@ -48,8 +48,9 @@ ignoreErrors = ["error-remote-getjson"]
   files = [ 
     ["PROJECTS", "/projects.md"],
     ["BLOG", "/blog.md"],
-    ["ABOUT", "/about.md"],
+    ["WRITEUPS", "/writeups.md"],
     ["NOTES","/notes.md"],
+    ["ABOUT", "/about.md"],
     ["CONTACT ME", "/contact.md"],
   ]
 
