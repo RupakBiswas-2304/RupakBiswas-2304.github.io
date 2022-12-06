@@ -51,7 +51,7 @@ ignoreErrors = ["error-remote-getjson"]
     ["WRITEUPS", "/writeups.md"],
     ["NOTES","/notes.md"],
     ["ABOUT", "/about.md"],
-    ["CONTACT ME", "/contact.md"],
+    ["CONTACT ME", "/contact.md"]
   ]
 
 [module]
