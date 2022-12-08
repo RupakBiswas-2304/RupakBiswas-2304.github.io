@@ -42,7 +42,13 @@
 **Link :** [Github](https://github.com/RupakBiswas-2304/covid-bot)
 
 #
+## [TemplateGen](/projects/template-gen)
+**Description:** Template Generator is a simple command line tool that can generate a file from a template. It can also add a template to the template folder.
+
+**Link :** [Github](https://github.com/RupakBiswas-2304/TemplateGen)
+
+#
 **[want more ? 🙄](https://github.com/RupakBiswas-2304?tab=repositories)**
 #
 #
-#
+# -
