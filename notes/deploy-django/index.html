@@ -1,0 +1,84 @@
+<!doctype html><html lang=en-us><head><title></title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><style>@import "https://fonts.googleapis.com/css2?family=Inconsolata&display=swap";:root{--cursor-visibility:hidden}html,body{width:100%;height:100%;overflow:auto;font-family:inconsolata,monospace;font-size:4vmin;line-height:4.1vmin;font-weight:400}body{margin:0;display:flex;flex-direction:row;justify-content:center;align-items:center}#content{min-width:82vmin;min-height:82vmin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{border-radius:10px;box-shadow:inset 0 0 1px white}::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:0 0 0 1px white}.cursor,#activity-title:after,#activity-content:after,#cd:after,#whoami:after,#cat:after,#tree:after{visibility:var(--cursor-visibility);content:"|";overflow:hidden;color:#fff;animation:blink 500ms linear infinite alternate}@keyframes blink{0%{opacity:0}100%{opacity:1}}@media only screen and (min-width:768px){body{font-size:2.5vmin;line-height:2.6vmin}#content{min-width:60vmin}}:root{--cursor-visibility:hidden}body{align-items:unset;overflow-y:scroll}#content{max-width:80vmin}pre{background:#161616cf;padding:5px;border:1px solid}@keyframes blink{0%{opacity:0}100%{opacity:1}}body{background:#1b1d1e}body #terminal{color:#bbb}body #user{color:#23e298}body #dir{color:#d08010}body .Typewriter__cursor{color:#bbb}a{color:#bbb}.navFull{background-color:#353535;font-family:courier new;font-size:17px;display:inline;position:fixed;bottom:0;left:0;width:100%;padding-top:5px;padding:10px;padding-bottom:0}.navCredits{float:right;padding-right:18px;padding-bottom:10px;padding-top:5px}#content::after{content:"\a\a";white-space:pre}</style></head><body><div id=content><span id=activity-title></span><br><span id=activity-content></span><br><script type=text/javascript>async function typewriter(e,t,n){var s=0,o=!1;addText="";const i=document.getElementById(t),a=()=>new Promise(e=>setTimeout(e,n)),r=()=>new Promise(e=>e()),c=()=>i.innerHTML=e.slice(0,s+1)+addText,l=document.createElement("span");for(l.id="blink",i.style.setProperty("--cursor-visibility","visible");s<e.length;){if(e.charAt(s+1)==="<"&&(o=!0),e.charAt(s+1)===">"&&(o=!1),o){s++;continue}requestAnimationFrame(c),n===0?await r():await a(),s++}i.style.setProperty("--cursor-visibility","collapse")}function parseDelay(e){const t=parseInt(e,10);return isNaN(t)?0:t}const titleDelay=parseDelay("0"),contentDelay=parseDelay("0"),typeeffetct=async()=>{await typewriter("\u003cspan id=\u0027terminal\u0027\u003e\u003ch1 id=\u0027title\u0027\u003e\u003c/h1\u003e\u003c/span\u003e","activity-title",titleDelay),await typewriter(`\u003cspan id=\u0027terminal\u0027\u003e\u003ch1 id=\u0022deploying-a-django-application-in-vm\u0022\u003eDeploying a Django application in VM\u003c/h1\u003e
+\u003cp\u003eFor development server we can use the built-in Django server. But for production we need to use a web server like Apache or Nginx. In this tutorial we will use Nginx.\u003c/p\u003e
+\u003cul\u003e
+\u003cli\u003eFor safety create a new production branch in git and push it to the server.\u003c/li\u003e
+\u003c/ul\u003e
+\u003cpre tabindex=\u00220\u0022\u003e\u003ccode class=\u0022language-git\u0022 data-lang=\u0022git\u0022\u003egit branch prod
+git checkout prod
+git push origin prod
+\u003c/code\u003e\u003c/pre\u003e\u003cul\u003e
+\u003cli\u003eNow we have to install gunicorn then we can call it directly\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003epip install gunicorn
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eOur project have a wsgi.py file, so we can directly start wsgi server\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecd backend/anwesha
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egunicorn anwesha.asgi
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eWe have some pending configuration in wsgi server, but lets setup nginx first\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo apt-get install nginx
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eNow we have to configure nginx to serve our application. We will use a reverse proxy to serve our application. We will use a file named \u003ccode\u003eanwesha.conf\u003c/code\u003e in \u003ccode\u003e/etc/nginx/sites-available/\u003c/code\u003e directory. This file will contain the following configuration\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-nginx\u0022 data-lang=\u0022nginx\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#66d9ef\u0022\u003eserver\u003c/span\u003e {
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    \u003cspan style=\u0022color:#f92672\u0022\u003elisten\u003c/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e80\u003c/span\u003e;
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    \u003cspan style=\u0022color:#f92672\u0022\u003eserver_name\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003ebackend.anwesha.live\u003c/span\u003e;
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    \u003cspan style=\u0022color:#f92672\u0022\u003elocation\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e/\u003c/span\u003e {
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e        \u003cspan style=\u0022color:#f92672\u0022\u003eproxy_pass\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003ehttp://127.0.0.1:8000\u003c/span\u003e;
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e    }
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e}
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eNow we have to enable this configuration by creating a symbolic link in \u003ccode\u003e/etc/nginx/sites-enabled/\u003c/code\u003e directory\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo ln -s /etc/nginx/sites-available/anwesha.conf /etc/nginx/sites-enabled
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eNow we have to restart nginx server\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo systemctl restart nginx
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003e
+\u003cp\u003eNow we have a reverse proxy that serves forwards all request at port 80 to port 8000\u003c/p\u003e
+\u003c/li\u003e
+\u003cli\u003e
+\u003cp\u003eBefore moving to wsgi configuration, lets setup ssl certificate with letsencrypt. We will use certbot to generate ssl certificate. We will use nginx plugin to generate certificate.\u003c/p\u003e
+\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo apt-get install certbot python3-certbot-nginx
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eNow we have to generate certificate\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo certbot --nginx -d backend.anwesha.live
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003ewe should add it to crontab to renew certificate automatically\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003esudo crontab -e
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eAdd the following line to crontab\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003e\u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e0\u003c/span\u003e * * * /usr/bin/certbot renew --quiet
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eNow that our server is running fine, we have some pending configuration in wsgi server. We have to configure gunicorn to serve our application. I am keeping the filename as \u003ccode\u003e./conf/gunicorn.conf.py\u003c/code\u003e and it is in the same directory as \u003ccode\u003emanage.py\u003c/code\u003e.\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-python\u0022 data-lang=\u0022python\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ewsgi_app \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;anwesha.wsgi\u0026#39;\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ebind \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;0.0.0.0:8000\u0026#39;\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eworkers \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e4\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eloglevel \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#34;debug\u0026#34;\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ekeep\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c/span\u003ealive \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e60\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ethreads \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#ae81ff\u0022\u003e4\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003epid \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;./conf/gunicorn.pid\u0026#39;\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003eaccess\u003cspan style=\u0022color:#f92672\u0022\u003e-\u003c/span\u003elogfile \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#e6db74\u0022\u003e\u0026#39;./conf/gunicorn-access.log\u0026#39;\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003ecapture_output \u003cspan style=\u0022color:#f92672\u0022\u003e=\u003c/span\u003e \u003cspan style=\u0022color:#66d9ef\u0022\u003eTrue\u003c/span\u003e
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003eWe can demonize and run in background, but for this case i\u0026rsquo;ll run in screen terminal.\u003c/li\u003e
+\u003cli\u003eNow we are ready to start our server with gunicorn as deamon\u003c/li\u003e
+\u003c/ul\u003e
+\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 style=\u0022color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan style=\u0022display:flex;\u0022\u003e\u003cspan\u003egunicorn -c ./conf/gunicorn.conf.py
+\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\u003cul\u003e
+\u003cli\u003ePush the prod branch.\u003c/li\u003e
+\u003c/ul\u003e
+\u003c/span\u003e`,"activity-content",contentDelay)};typeeffetct()</script></div><span class=navFull><span><a href=/>Home</a>
+<span>&#8192;|&#8192;</span>
+<a href=./..>/notes/</a></span>
+<span class=navCredits><a href=https://github.com/RupakBiswas-2304 target=_blank rel=noopener>Github</a></span></span></body></html>
