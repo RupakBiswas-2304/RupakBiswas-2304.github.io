@@ -1,3 +1,9 @@
+---
+title: "4 Register Assembler and Emulator"
+date: 2022-12-20T09:03:20-08:00
+draft: false
+---
+
 # TITLE: 4 Register Assembler and Emulator
 ### Author: [RUPAK BISWAS]( https://github.com/RupakBiswas-2304 )
 ### Date: 2021-09-16

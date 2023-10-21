@@ -1,3 +1,9 @@
+---
+title: "PyGoat"
+date: 2022-12-20T09:03:20-08:00
+draft: false
+---
+
 # PyGoat
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)

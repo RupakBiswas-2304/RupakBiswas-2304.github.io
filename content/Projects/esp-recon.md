@@ -1,3 +1,9 @@
+---
+title: "ESP-RECON"
+date: 2022-12-20T09:03:20-08:00
+draft: false
+---
+
 # Handwritten Digit Recognition
 The goal of the project is to implement CNN based digit-recognition system in a edge and resource constrained device. More specifically, I used a esp32-cam module, which have 2mp camera, 512kb RAM and 4Mb flash memory. My object is to capture image in a loop, crop that image, send to the cnn model’s input tensor, run the model ( invoke ) and output the result based on maximum probability returned
 

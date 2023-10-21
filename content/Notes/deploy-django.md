@@ -1,3 +1,9 @@
+---
+title: "AWS Django Deployment"
+date: 2022-12-20T09:03:20-08:00
+draft: false
+---
+
 # Deploying a Django application in VM
 
 For development server we can use the built-in Django server. But for production we need to use a web server like Apache or Nginx. In this tutorial we will use Nginx.
