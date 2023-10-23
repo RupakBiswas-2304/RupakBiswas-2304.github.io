@@ -4,14 +4,7 @@ go to micropython offical site
 Select esp32 or any other board if you are using
 make sure to have esptool.py installed or do pip install esptool instead</description></item><item><title>ESP32 Blink</title><link>/blog/esp32/blink/</link><pubDate>Tue, 20 Dec 2022 09:03:20 -0800</pubDate><guid>/blog/esp32/blink/</guid><description>Simple Blink Led in ESP32 As we have successfully managed to install ESP-IDF we can start coding and uploading in ESP32.
 We will follow the bellow file structure
-main
-|--&amp;gt; CMakeLists.txt
-|--&amp;gt; component.mk
-|--&amp;gt; main.cpp
-|--&amp;gt; additional-files.cpp
-|--&amp;gt; additional-header-files.cpp CMakeLists.txt
-example_test.py
-README.md Create a project folder and enter in the folder Create all the files mentioned above</description></item><item><title>ESP32-OLED</title><link>/blog/esp32/oledmpy/</link><pubDate>Tue, 20 Dec 2022 09:03:20 -0800</pubDate><guid>/blog/esp32/oledmpy/</guid><description>OLED with MicroPython on ESP32 Connection VCC to 3.3V GND to GND SCL/SCK to GPIO22 SDA to GPIO21 Installations Need to install SSD1306 OLED Library Open Editor ( Thonny or uPyCraft ) Create a file named ssd1306.py Copy the code from here Save the file Code Imports &amp;ndash;&amp;gt; from machine import Pin, SoftI2C
+main |--&amp;gt; CMakeLists.txt |--&amp;gt; component.mk |--&amp;gt; main.cpp |--&amp;gt; additional-files.cpp |--&amp;gt; additional-header-files.cpp CMakeLists.txt example_test.py README.md Create a project folder and enter in the folder Create all the files mentioned above</description></item><item><title>ESP32-OLED</title><link>/blog/esp32/oledmpy/</link><pubDate>Tue, 20 Dec 2022 09:03:20 -0800</pubDate><guid>/blog/esp32/oledmpy/</guid><description>OLED with MicroPython on ESP32 Connection VCC to 3.3V GND to GND SCL/SCK to GPIO22 SDA to GPIO21 Installations Need to install SSD1306 OLED Library Open Editor ( Thonny or uPyCraft ) Create a file named ssd1306.py Copy the code from here Save the file Code Imports &amp;ndash;&amp;gt; from machine import Pin, SoftI2C
 import ssd1306
 from time import sleep Create I2C object &amp;ndash;&amp;gt; i2c = SoftI2C(scl=Pin(22), sda=Pin(21)) Create OLED object &amp;ndash;&amp;gt; oled_width = 128
 oled_height = 64
