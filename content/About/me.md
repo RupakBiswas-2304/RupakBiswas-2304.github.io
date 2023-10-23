@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: About
 date: 2023-10-20T09:03:20-08:00
 draft: false
 ---
@@ -16,4 +16,4 @@ draft: false
 - [rupak.biswas@owasp.org](mailto:rupak.biswas@owasp.org) -> For OWASP related query
 
 - LinkedIn : [Rupak Biswas](https://www.linkedin.com/in/rupak-biswas-2304/)
-- Github : [RupakBiswas-2304](https://github.com/RupakBiswas-2304)
+- GitHub : [RupakBiswas-2304](https://github.com/RupakBiswas-2304)
