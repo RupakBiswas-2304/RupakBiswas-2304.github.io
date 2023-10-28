@@ -15,5 +15,6 @@ draft: false
 - [rupak_2001cs57@iitp.ac.in](mailto:rupak_2001cs57@iitp.ac.in) -> University Mail ID
 - [rupak.biswas@owasp.org](mailto:rupak.biswas@owasp.org) -> For OWASP related query
 
+- Resume : [link](https://drive.google.com/file/d/1VCk1Ylweh6DFb_e2Fj5CjdK8KN2KWGeF/view?usp=drive_link)
 - LinkedIn : [Rupak Biswas](https://www.linkedin.com/in/rupak-biswas-2304/)
 - GitHub : [RupakBiswas-2304](https://github.com/RupakBiswas-2304)
